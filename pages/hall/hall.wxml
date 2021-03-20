@@ -1,0 +1,95 @@
+<!--pages/hall/hall.wxml-->
+<view class="container">
+    <view class="configure">
+        <view class="configuration-title">
+            <label class="title">配置</label>
+            <label class="count-total">总数：{{configuration[game].total}}</label>
+        </view>
+        <view class="configuration-list" wx:if="{{game === 'wodi'}}" catchtap="showPicker">
+            <view class="content-item"  wx:for="{{configuration.wodi.content}}" wx:key="{{index}}">
+                {{item.name}} x {{configuration.wodi.value[index]}}
+            </view>
+        </view>
+        <view wx:elif="{{game === 'Avalon'}}" catchtap="showPicker">
+            <view class="has-lady">
+                <label>湖中仙女：</label>
+                <label>{{configuration.Avalon.content[configuration.Avalon.checkIndex].hasLady ? '有': '无'}}</label>
+            </view>
+            <view class="configuration-subtitle">
+                红方：
+            </view>
+            <view class="configuration-list">
+                <view class="content-item"  wx:for="{{configuration.Avalon.content[configuration.Avalon.checkIndex].content.red}}" wx:key="{{index}}">
+                    {{item.name}}{{item.count > 1 ? ' x ' + item.count: ''}}
+                </view>
+            </view>
+            <view class="configuration-subtitle">
+                蓝方：
+            </view>
+            <view class="configuration-list">
+                <view class="content-item"  wx:for="{{configuration.Avalon.content[configuration.Avalon.checkIndex].content.blue}}" wx:key="{{index}}">
+                    {{item.name}}{{item.count > 1 ? ' x ' + item.count: ''}}
+                </view>
+            </view>
+        </view>
+        <!-- <view wx:elif="{{game === 'buyaozuo'}}" class="configuration-title">
+            
+        </view> -->
+        <picker
+            wx:if="{{game === 'wodi'}}"
+            isShowPicker="{{isShowPicker}}"
+            catch:sure="sureWodiCallBack"
+            catch:cancle="cancleCallBack"
+            scrollType="normal"
+            listData="{{configuration.wodi.range}}"
+            defaultPickData="{{configuration.wodi.vIndex}}"
+            titleText=""
+            cancelText="取消"
+            sureText="确定"
+            names="{{configuration.wodi.names}}"
+        ></picker>
+        <picker
+            wx:elif="{{game === 'Avalon'}}"
+            isShowPicker="{{isShowPicker}}"
+            catch:sure="sureAvalonCallBack"
+            catch:cancle="cancleCallBack"
+            scrollType="normal"
+            listData="{{configuration.Avalon.contentName}}"
+            defaultPickData="{{configuration.Avalon.checkIndex}}"
+            titleText="选择配置"
+            cancelText="取消"
+            sureText="确定"
+            keyWordsOfShow="name"
+        ></picker>
+    </view>
+    <view class="icons">
+        <button catchtap="refreshHome"><text class="iconfont icon-shuaxin">
+        </text></button>
+        <button><text class="iconfont icon-shouquan">
+        </text></button>
+    </view>
+    <view class="users">
+        <view class="user" wx:for="{{users}}" wx:key="{{index}}">
+            <button class="user-avator" open-type="getUserInfo">
+                <open-data type="userAvatarUrl" class=""></open-data>
+            </button>
+            <input class="user-nickname" placeholder="请完善昵称" placeholder-class="placeholder-class" value="{{users[index].nickname}}" data-idx="{{index}}" catchblur="updateNickname">
+                
+            </input>
+        </view>
+        <view class="add-user" wx:for="{{configuration[game].total - users.length}}" wx:key="{{index}}">
+            <button class="user-avator" open-type="share">
+                +
+                <!-- <open-data type="userAvatarUrl" class=""></open-data> -->
+            </button>
+            <!-- <view class="user-nickname"> -->
+                <!-- 请完善昵称 -->
+            <!-- </view> -->
+        </view>
+    </view>
+    
+    <view class="btns">
+        <button bindtap="startGame">开始游戏</button>
+        <button bindtap="outHome">退出房间</button>
+    </view>
+</view>

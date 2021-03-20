@@ -1,0 +1,17 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+    <view class="game-list">
+        <button
+            class="game"
+            data-value="{{game.value}}"
+            catchtap="goGame"
+            wx:for="{{games}}"
+            wx:for-item="game"
+            wx:key="{{index}}">
+            <label>{{game.name}}</label>
+        </button>
+    </view>
+    <view class="advice" catchtap="goAdvice">
+        <label>反馈意见 | 联系我们</label>
+    </view>
+</view>

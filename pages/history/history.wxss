@@ -1,0 +1,34 @@
+/* pages/history/history.wxss */
+.history, .history-item {
+    width: 100%;
+    color: #929dd0;
+}
+.vote-title,
+.vote-created-user,
+.process-item,
+.vote-result {
+    background-color: #494f87;
+    height: 80rpx;
+    line-height: 80rpx;
+    padding: 0 20rpx;
+    border-bottom: 2rpx solid #929dd0;
+}
+.vote-title {
+    font-size: large;
+    font-weight: bold;
+}
+.vote-result {
+    color: #040819;
+    font-size: large;
+    height: 100rpx;
+    line-height: 100rpx;
+    font-weight: bold;
+    border-bottom: 0;
+}
+.history-item,
+.subvote {
+    border-top: 10rpx solid #929dd0;
+}
+.history-item:first-of-type {
+    border-top: 0;
+}

@@ -1,0 +1,23 @@
+/* pages/index/index.wxss */
+.game-list{
+    width: 100%;
+}
+
+.game {
+    color: #929dd0;
+    background-color: #494f87;
+    height: 120rpx;
+    width: 100% !important;
+    margin-top: 30rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 0 !important;
+}
+
+.advice {
+    color: #929dd0;
+    margin: 50rpx 0;
+}

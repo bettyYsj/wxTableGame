@@ -1,0 +1,58 @@
+/* pages/gaming/gaming.wxss */
+.btns {
+    width: 100%;
+    margin-top: 20rpx;
+}
+.btns button {
+    color: #929dd0;
+    background-color: #494f87;
+    height: 90rpx;
+    width: 100% !important;
+    margin-top: 4rpx;
+    border-radius: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20rpx;
+    margin-right: 50rpx;
+}
+.icons button {
+    width: 70rpx !important;
+    padding: 0 !important;
+    margin: 0 0 0 20rpx !important;
+    background: #494f87;
+}
+.icons text {
+    text-align: center;
+    width: 70rpx;
+    color: #929dd0;
+    font-size: 50rpx;
+}
+.gaming, .gaming-block {
+    width: 100%;
+}
+.gaming-block label {
+    padding: 30rpx 50rpx;
+    display: flex;
+    flex-direction: column;
+    color: #929dd0;
+    background-color: #494f87;
+    font-weight: bold;
+    border-bottom: 2rpx solid #929dd0;
+    display: flex;
+    justify-content: center;
+}
+.voting {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.no-border {
+    border-bottom: 0 !important;
+}

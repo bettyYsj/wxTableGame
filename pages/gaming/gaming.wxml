@@ -1,0 +1,29 @@
+<!--pages/gaming/gaming.wxml-->
+<view class="container">
+    <view class="gaming">
+        <view class="gaming-block configure">
+            <label>配置</label>
+            <label><text>{{configuration}}</text></label>
+        </view>
+        <view class="gaming-block rule">
+            <label>身份</label>
+            <label wx:if="{{showRule}}">{{rule}}</label>
+        </view>
+        <view class="gaming-block info">
+            <label>已知信息</label>
+            <label class="no-border" wx:if="{{showInfo}}">{{info}}{{rule === '梅林' ? '（为可见蓝方）' : ''}}</label>
+        </view>
+        <view class="icons">
+        <!-- 刷新 历史 角色说明 -->
+            <button><text class="iconfont icon-shuaxin"></text></button>
+            <button><text class="iconfont icon-shuaxin"></text></button>
+        </view>
+    </view>
+    <view class="btns">
+        <button>参与投票</button>
+        <button>发起投票</button>
+        <button>结束游戏</button>
+        <button>再来一轮</button>
+    </view>
+    <voting class="voting" wx:if="{{true}}" />
+</view>

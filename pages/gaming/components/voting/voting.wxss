@@ -1,0 +1,39 @@
+/* pages/gaming/components/voting/voting.wxss */
+.voting-component {
+    width: calc(100% - 100rpx);
+    min-height: calc(100% - 100rpx);
+    padding: 50rpx;
+    background-color: rgba(7,18,39,0.7);
+    display: flex;
+    align-items: center;
+    color: #929dd0;
+}
+.voting-content {
+    background-color: #494f87;
+    padding: 10rpx 0;
+    width: 100%;
+}
+.checkbox-label, .voting-title {
+    display: flex;
+    align-items: center;
+    padding: 20rpx 50rpx;
+}
+.voting-title {
+    justify-content: center;
+    border-bottom: 4rpx solid #929dd0;
+}
+.btns {
+    width: 100%;
+    margin-top: 20rpx;
+}
+.btns button {
+    color: #929dd0;
+    background-color: #040819;
+    height: 90rpx;
+    width: 100% !important;
+    margin-top: 4rpx;
+    border-radius: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

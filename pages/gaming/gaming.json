@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "voting": "./components/voting/voting"
+  }
+}

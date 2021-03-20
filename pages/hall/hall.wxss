@@ -1,0 +1,105 @@
+/* pages/hall/hall.wxss */
+.configure {
+    color: #929dd0;
+    background-color: #494f87;
+    width: 100%;
+    /* margin-top: 30rpx; */
+}
+.configuration-title {
+    border-bottom: 1rpx solid #929dd0;
+    padding: 0 50rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.configuration-list {
+    height: 80rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50rpx;
+}
+.configuration-subtitle, .has-lady {
+    padding: 20rpx 50rpx;
+    border-bottom: 1rpx solid #929dd0;
+    border-top: 1rpx solid #929dd0;
+    display: flex;
+    justify-content: space-between;
+}
+.has-lady {
+    border-bottom: 0rpx;
+    border-top: 0rpx;
+}
+.user, .add-user {
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 232rpx;
+}
+.users {
+    display: flex;
+    flex-wrap: wrap;
+}
+.user-avator {
+    width: 120rpx !important;
+    height: 120rpx !important;
+    background-color: #494f87;
+    color: #929dd0;
+    border-radius: 120rpx !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20rpx 0 !important;
+    overflow: hidden;
+    padding: 0 !important;
+}
+.btns {
+    width: 100%;
+    margin-top: 20rpx;
+}
+.btns button {
+    color: #929dd0;
+    background-color: #494f87;
+    height: 90rpx;
+    width: 100% !important;
+    margin-top: 4rpx;
+    border-radius: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-nickname {
+    color: #929dd0;
+    background-color: #494f87;
+    padding: 5rpx 20rpx;
+    border-radius: 25rpx;
+    margin-bottom: 15rpx;
+    width: calc(100% - 80rpx);
+    height: 50rpx;
+    text-align: center;
+}
+.placeholder-class {
+    color: #6c769e !important;
+}
+.icons {
+    display: flex;
+    justify-content: flex-end;
+    width: calc(100% - 100rpx);
+    margin-top: 20rpx;
+}
+.icons button {
+    width: 70rpx !important;
+    padding: 0 !important;
+    margin: 0 0 0 20rpx !important;
+    background: #494f87;
+}
+.icons text {
+    text-align: center;
+    width: 70rpx;
+    color: #929dd0;
+    font-size: 50rpx;
+}

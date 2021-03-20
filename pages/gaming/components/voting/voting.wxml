@@ -1,0 +1,24 @@
+<!--pages/gaming/components/voting/voting.wxml-->
+<view class="voting-component">
+    <view class="voting-content">
+        <view class="voting-title">
+            发起投票：建立队伍
+            <!-- 发起投票：建立队伍 -->
+            <!-- 是否同意该队伍执行任务 -->
+            <!-- 参与投票：执行任务 -->
+        </view>
+        <view class="voting-checkbox">
+            <checkbox-group bindchange="checkboxChange">
+                <label class="checkbox-label" wx:for="{{items}}" wx:key="{{item.value}}">
+                    <view class="checkbox-view item-checkbox">
+                        <checkbox color="#929dd0" value="{{item.value}}" checked="{{item.checked}}"/>
+                    </view>
+                    <view class="checkbox-view item-name">{{item.name}}</view>
+                </label>
+            </checkbox-group>
+        </view>
+        <view class="btns">
+            <button>发起投票</button>
+        </view>
+    </view>
+</view>

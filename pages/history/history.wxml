@@ -1,0 +1,35 @@
+<!--pages/history/history.wxml-->
+<view class="history">
+    <view class="history-item"  wx:for="{{votes}}" wx:key="{{idx}}" wx:for-index="idx" wx:for-item="vote">
+        <view class="vote-title">
+            {{vote.title}} 
+        </view>
+        <view class="vote-created-user">
+            发起人: {{vote.createdUser}} （{{vote.createdAt}}）
+        </view>
+        <view class="vote-process">
+            <view class="process-item" wx:for="{{vote.process}}" wx:key="{{index}}">
+                {{item.value}} : {{item.users}}
+            </view>
+        </view>
+        <view class="vote-result">
+            {{vote.result}}
+        </view>
+        <view class="subvote" wx:if="{{vote.subVote}}">
+            <view class="vote-title">
+                {{vote.subVote.title}} 
+            </view>
+            <view class="vote-created-user">
+                发起时间: {{vote.subVote.createdAt}}）
+            </view>
+            <view class="vote-process">
+                <view class="process-item" wx:for="{{vote.subVote.process}}" wx:key="{{index}}">
+                    {{item.value}}人数: {{item.count}}
+                </view>
+            </view>
+            <view class="vote-result">
+                {{vote.subVote.result}}
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,44 @@
+/* pages/advice/advice.wxss */
+.advice {
+    color: #929dd0;
+    min-height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.advice-form {
+    height: 100%;
+    display: block;
+}
+button {
+    width: 100% !important;
+    border-radius: 0 !important;
+    color: #929dd0;
+    background-color: #494f87;
+    height: 100rpx !important;
+    padding: 0 !important;
+    line-height: 100rpx !important;
+}
+.placeholder-class {
+    color: #6c769e !important;
+}
+.message {
+    font-size: small;
+    color: #040819;
+    margin: 20rpx 50rpx;
+}
+.email-input,
+.content-textarea {
+    background-color: #494f87;
+    padding: 30rpx 50rpx;
+    width: 650rpx;
+}
+.email-input {
+    border-bottom: 10rpx solid #6c769e;
+}
+.content {
+    height: 50%;
+}
+.content-textarea {
+    height: calc(100% - 60rpx);
+}

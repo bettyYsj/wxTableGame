@@ -1,0 +1,17 @@
+<!--pages/advice/advice.wxml-->
+<form class="advice-form" bindsubmit="submit">
+    <view class="container">
+        <view class="advice">
+            <view class="email">
+                <input class="email-input" placeholder="请输入Email" placeholder-class="placeholder-class" name="email" />
+            </view>
+            <view class="content">
+                <textarea class="content-textarea" bindblur="bindTextAreaBlur" placeholder-class="placeholder-class" placeholder="可以提交改进意见、遇到问题、调戏作者等等。" name="content" />
+            </view>
+            <view class="message">
+                <text>不写Email也可以提交啦，但可能收不到回复噢。或者要不要试试看直接发邮件至betty_yusunjie@163.com \n ꒰⑅•ᴗ•⑅꒱</text>
+            </view>
+        </view>
+        <button form-type="submit">提交</button>
+    </view>
+</form>
